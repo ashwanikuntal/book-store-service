@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: 2020-09-25
+Description: "Create SSM Parameters"
+Resources:
+	HttpTimeout:
+		Type: "AWS::SSM::Parameters"
+		Properties:
+			Name: "/_APPLICATION_ID_/_APPNAME_/_BRANCH_VERSION_/http.timeout"
+			Type: "Integer"
+			Value: 720000
+			Description: "Http Timeout in milliseconds"
+	JWTSecret:
+		Type: "AWS::SSM::Parameters"
+		Properties:
+			Name: "/_APPLICATION_ID_/_APPNAME_/_BRANCH_VERSION_/jwt.secret"
+			Type: "String"
+			Value: "jshdafk8q032409fj3out09432ut0932fjeoirejf03u032n"
+			Description: "JWT secret"
